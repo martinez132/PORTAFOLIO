@@ -5,6 +5,7 @@ import TaskCard from './components/TaskCard';
 import SearchBar from './components/SearchBar';
 import Modal from './components/Modal';
 import banner from './assets/Adrian.jpeg';
+import logoUniversidad from './assets/UMG.png'; // <-- Importa el logo
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -23,7 +24,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Portafolio de Tareas de Desarrollo Web</h1>
+      {/* Logo independiente en esquina superior izquierda */}
+      <img src={logoUniversidad} alt="Logo Universidad" className="logo-independiente" />
+      
+      {/* Título centrado debajo del logo */}
+      <h1 className="titulo-universidad">Portafolio de Tareas de Desarrollo Web</h1>
+      
       <img src={banner} alt="Foto perfil" className="profile-img" />
       <SearchBar search={search} setSearch={setSearch} />
 

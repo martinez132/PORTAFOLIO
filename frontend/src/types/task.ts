@@ -7,6 +7,8 @@ export interface Task {
   size: string;       
   file?: string;     
   repo?: string;      
-  site?: string;      
+  site?: string;  
+  tech?: string[]; // <-- agrega esto
+    
 }
 
