@@ -166,6 +166,27 @@ Si quieres contribuir:
 4. Haz push y abre un Pull Request a la rama `main` del repo original.
 
 ---
+## Deploy en Vercel
+
+### Requisitos previos
+- Código del frontend en la carpeta `frontend` del repo.
+- Script `build` en `frontend/package.json` (CRA ya lo trae: `npm run build`).
+- Si el frontend consume una API, tener la URL del backend desplegada (o usar variables de entorno).
+
+---
+
+### Usar la interfaz web de Vercel.
+
+1. Entra a https://vercel.com e inicia sesión con tu cuenta GitHub.
+2. Haz clic en "New Project" → "Import Git Repository" → selecciona `martinez132/PORTAFOLIO`.
+3. En "Root Directory" escribe `frontend` (para que Vercel construya la carpeta correcta).
+4. Framework Preset: Vercel normalmente detecta "Create React App". Si no:
+   - Build Command: `npm run build`
+   - Output Directory: `build`
+5. En "Environment Variables" añade (si aplican):
+   - Key: `REACT_APP_API_URL`  Value: `https://tu-backend.com` (o URL de producción de tu API)
+   - Añade variables para `production` y `preview` según necesites.
+6. Deploy: haz clic en Deploy. Espera a que termine; la URL final aparecerá en el panel del proyecto.
 
 ## Licencia
 
