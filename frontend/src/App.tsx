@@ -6,6 +6,21 @@ import SearchBar from './components/SearchBar';
 import Modal from './components/Modal';
 import banner from './assets/Adrian.jpeg';
 import logoUniversidad from './assets/UMG.png'; // <-- Importa el logo
+import reactLogo from './assets/tech/react.svg';
+import nodeLogo from './assets/tech/nodedotjs.svg';
+import jsLogo from './assets/tech/javascript.svg';
+import tsLogo from './assets/tech/typescript.svg';
+import cssLogo from './assets/tech/css.svg';
+import htmlLogo from './assets/tech/html5.svg';
+
+const techLogos: Record<string, string> = {
+  react: reactLogo,
+  nodedotjs: nodeLogo,
+  javascript: jsLogo,
+  typescript: tsLogo,
+  css: cssLogo,
+  html5: htmlLogo,
+};
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -31,6 +46,12 @@ function App() {
       <h1 className="titulo-universidad">Portafolio de Tareas de Desarrollo Web</h1>
       
       <img src={banner} alt="Foto perfil" className="profile-img" />
+<div className="profile-info">
+  <h2>Milton Adrian Martínez Avila</h2>
+  <p>
+    Soy estudiante de Ingeniería en Sistemas, apasionado por la tecnología y el desarrollo de soluciones innovadoras. Me interesa el análisis, diseño y programación de sistemas, así como la gestión de proyectos tecnológicos. 
+  </p>
+</div>
       <SearchBar search={search} setSearch={setSearch} />
 
       <div className="task-list">

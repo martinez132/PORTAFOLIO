@@ -15,7 +15,7 @@ const tasks = [
     description: 'GLOSARIO',
     type: 'pdf',
     file: 'pdfs/Tarea N°1.pdf',
-    size: '40 KB'
+    tech: ["pdf"]
   },
   {
     
@@ -36,7 +36,7 @@ const tasks = [
     description: 'Investigación',
     type: 'pdf',
     file: '/pdfs/Tarea N°3.pdf',
-    size: '185 KB'  
+    tech: ["pdf"]
   }, 
 
   {
@@ -84,6 +84,7 @@ const tasks = [
     date: '10/10/2025',
     description: 'Certificado',
   repo: "https://www.freecodecamp.org/certification/fcc-191687f0-7aab-46e3-a53e-4915694b1275/front-end-development-libraries",
+   tech: ["pdf"]
 },
 ];
 

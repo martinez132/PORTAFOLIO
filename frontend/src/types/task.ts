@@ -8,7 +8,8 @@ export interface Task {
   file?: string;     
   repo?: string;      
   site?: string;  
-  tech?: string[]; // <-- agrega esto
-    
+  tech?: string[]; 
+  repoName?: string; 
+  siteName?: string;    
 }
 
